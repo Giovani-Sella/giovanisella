@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,34 @@
   <link rel="canonical" href="https://giovanisella.com.br/portfolio/fotografia.html">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__inner">
+      <div>
+        <p class="hero__eyebrow">Site pessoal</p>
+        <h1 class="hero__titulo">Giovani Sella</h1>
+        <p class="hero__bio">
+          Jornalista em formação pela UFPR, estagiário no Jornal Plural.
+          Aqui escrevo de vez em quando sobre o que vejo, produzo e penso. Alem disso, fotografo e produzo audiovisual
+          pela <a href="https://pererecriativa.com.br" target="_blank" rel="noopener">Pererê Criativa</a>.
+        </p>
+        <nav class="hero__acoes" aria-label="Navegação rápida">
+          <a href="/blog/">Blog</a>
+          <a href="/curriculo/">Currículo</a>
+          <a href="/portfolio/" class="ativo">Portfólio</a>
+          <a href="/sobre.html">Sobre</a>
+        </nav>
+      </div>
+    </div>
+  </section>
 
   <header class="breadcrumb">
     <div class="container--lg">
       <ol class="breadcrumb__lista">
-        <li class="breadcrumb__item"><a href="/">Giovani Sella</a></li>
+        <li class="breadcrumb__item"><a href="/">Início</a></li>
         <li class="breadcrumb__separador">›</li>
         <li class="breadcrumb__item"><a href="/portfolio/">Portfólio</a></li>
         <li class="breadcrumb__separador">›</li>
@@ -91,13 +114,13 @@
         <li><a href="https://linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a></li>
         <li><a href="https://github.com/Giovani-Sella" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
-      <p class="footer__copy">© 2025 Giovani Sella · Curitiba, PR</p>
+      <p class="footer__copy">© 2026 Giovani Sella · Curitiba, PR</p>
     </div>
   </footer>
 
   <script src="/assets/js/script.js"></script>
   <script>
-    const btns  = document.querySelectorAll('.filtro-btn');
+    const btns = document.querySelectorAll('.filtro-btn');
     const fotos = document.querySelectorAll('.foto-item');
     btns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -111,4 +134,5 @@
     });
   </script>
 </body>
+
 </html>

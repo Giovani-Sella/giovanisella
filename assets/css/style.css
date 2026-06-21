@@ -57,34 +57,42 @@ h1, h2, h3, h4 {
 
 /* ─── BREADCRUMB ─────────────────────────────────────────── */
 .breadcrumb {
-  padding: 1.5rem 0;
+  height: 4rem;
   border-bottom: 1px solid var(--cinza-claro);
   margin-bottom: 0;
+}
+
+.breadcrumb .container--lg {
+  height: 100%;
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
 }
 
 .breadcrumb__lista {
   list-style: none;
   display: flex;
-  align-items: center;
+  align-items: center; /* centraliza os itens verticalmente */
   gap: 0.5rem;
   flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
 }
 
-.breadcrumb__item a {
-  font-size: 0.875rem;
-  color: var(--cinza);
-  text-decoration: none;
+.breadcrumb__item {
+  font-size: var(--fs-sm);
 }
 
-.breadcrumb__item a:hover { color: var(--preto); }
-
-.breadcrumb__item--atual {
-  font-size: 0.875rem;
+.breadcrumb__item a:hover {
   color: var(--preto);
 }
 
+.breadcrumb__item--atual {
+  color: var(--preto);
+  font-size: var(--fs-sm);
+}
+
 .breadcrumb__separador {
-  font-size: 0.875rem;
   color: var(--cinza-claro);
   user-select: none;
 }
@@ -171,9 +179,12 @@ h1, h2, h3, h4 {
 .hero__acoes {
   display: flex;
   flex-direction: row-reverse;
+  width: 100%;
 }
 
 .hero__acoes a {
+  flex: 1;
+  text-align: center;
   display: block;
   font-size: var(--fs-nav);
   color: var(--cinza);
@@ -181,7 +192,14 @@ h1, h2, h3, h4 {
   transition: color 0.15s;
 }
 
-.hero__acoes a:hover { color: var(--preto); }
+.hero__acoes a:hover {
+  color: var(--preto);
+}
+
+.hero__acoes a.ativo {
+  color: var(--preto);
+  text-decoration: underline;
+}
 
 /* ─── SEÇÕES ─────────────────────────────────────────────── */
 .secao {
@@ -543,6 +561,9 @@ h1, h2, h3, h4 {
 }
 
 /* ─── PORTFÓLIO FOTO ─────────────────────────────────────── */
+.portfolio {max-width: var(--max-w-lg); margin-inline: auto; padding: 2.5rem 2rem 5rem;}
+
+
 .portfolio-filtros {
   max-width: var(--max-w-lg);
   margin-inline: auto;
@@ -738,4 +759,8 @@ h1, h2, h3, h4 {
   .newsletter__form { flex-direction: column; }
 
   .sobre__foto-bloco { flex-direction: column; }
+
+  .hero__acoes { font-size: var(--fs-sm); }
+  .hero__acoes a { padding: 0.25rem 0; font-size: var(--fs-sm);
+  }
 }
