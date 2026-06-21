@@ -2,33 +2,6 @@
 const EO_API_KEY = 'SUA_API_KEY_AQUI';
 const EO_LIST_ID = 'SEU_LIST_ID_AQUI';
 
-/* ── Menu hamburguer ──────────────────────────────────────── */
-const toggle = document.querySelector('.nav__toggle');
-const menu   = document.querySelector('.nav__links');
-
-if (toggle && menu) {
-  toggle.addEventListener('click', () => {
-    const aberto = menu.classList.toggle('aberto');
-    toggle.setAttribute('aria-expanded', aberto);
-  });
-
-  // fecha o menu ao clicar num link
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('aberto');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  // fecha ao clicar fora
-  document.addEventListener('click', e => {
-    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-      menu.classList.remove('aberto');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-}
-
 /* ── Newsletter ───────────────────────────────────────────── */
 const form = document.querySelector('.newsletter__form');
 

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de fotografia de Giovani Sella — fotojornalismo e fotografia documental.">
+  <title>Fotografia · Giovani Sella</title>
+  <link rel="canonical" href="https://giovanisella.com.br/portfolio/fotografia.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <header class="breadcrumb">
+    <div class="container--lg">
+      <ol class="breadcrumb__lista">
+        <li class="breadcrumb__item"><a href="/">Giovani Sella</a></li>
+        <li class="breadcrumb__separador">›</li>
+        <li class="breadcrumb__item"><a href="/portfolio/">Portfólio</a></li>
+        <li class="breadcrumb__separador">›</li>
+        <li class="breadcrumb__item--atual">Fotografia</li>
+      </ol>
+    </div>
+  </header>
+
+  <main>
+    <div class="pagina-header">
+      <div class="pagina-header__inner">
+        <h1 class="pagina-header__titulo">Fotografia</h1>
+        <p class="pagina-header__desc">Fotojornalismo, documentário e fotografia comercial pela Pererê Criativa.</p>
+      </div>
+    </div>
+
+    <div class="portfolio-filtros" role="group" aria-label="Filtrar fotos por categoria">
+      <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
+      <button class="filtro-btn" data-filtro="fotojornalismo">Fotojornalismo</button>
+      <button class="filtro-btn" data-filtro="documental">Documental</button>
+      <button class="filtro-btn" data-filtro="comercial">Comercial</button>
+    </div>
+
+    <div class="foto-grade" id="foto-grade">
+
+      <figure class="foto-item" data-cat="fotojornalismo">
+        <img src="/assets/img/foto-pf-01.jpg" alt="Manifestação no centro de Curitiba" loading="lazy">
+        <figcaption class="foto-item__legenda">Manifestação no centro, 2024</figcaption>
+      </figure>
+
+      <figure class="foto-item" data-cat="documental">
+        <img src="/assets/img/foto-pf-02.jpg" alt="Feira do Largo da Ordem" loading="lazy">
+        <figcaption class="foto-item__legenda">Feira do Largo da Ordem</figcaption>
+      </figure>
+
+      <figure class="foto-item" data-cat="documental">
+        <img src="/assets/img/foto-pf-03.jpg" alt="Araucárias no Parque Barigui" loading="lazy">
+        <figcaption class="foto-item__legenda">Parque Barigui</figcaption>
+      </figure>
+
+      <figure class="foto-item" data-cat="comercial">
+        <img src="/assets/img/foto-pf-04.jpg" alt="Evento corporativo" loading="lazy">
+        <figcaption class="foto-item__legenda">Evento institucional, 2024</figcaption>
+      </figure>
+
+      <figure class="foto-item" data-cat="fotojornalismo">
+        <img src="/assets/img/foto-pf-05.jpg" alt="Cobertura eleitoral" loading="lazy">
+        <figcaption class="foto-item__legenda">Eleições municipais 2024</figcaption>
+      </figure>
+
+      <figure class="foto-item" data-cat="documental">
+        <img src="/assets/img/foto-pf-06.jpg" alt="Retrato urbano" loading="lazy">
+        <figcaption class="foto-item__legenda">Retrato urbano, Curitiba</figcaption>
+      </figure>
+
+      <figure class="foto-item" data-cat="comercial">
+        <img src="/assets/img/foto-pf-07.jpg" alt="Fotografia de produto" loading="lazy">
+        <figcaption class="foto-item__legenda">Fotografia de produto</figcaption>
+      </figure>
+
+      <figure class="foto-item" data-cat="fotojornalismo">
+        <img src="/assets/img/foto-pf-08.jpg" alt="Protesto estudantil" loading="lazy">
+        <figcaption class="foto-item__legenda">Movimento estudantil, UFPR</figcaption>
+      </figure>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__nome">Giovani Sella</span>
+      <ul class="footer__links">
+        <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter / X</a></li>
+        <li><a href="https://linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/Giovani-Sella" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+      <p class="footer__copy">© 2025 Giovani Sella · Curitiba, PR</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/script.js"></script>
+  <script>
+    const btns  = document.querySelectorAll('.filtro-btn');
+    const fotos = document.querySelectorAll('.foto-item');
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('ativo'));
+        btn.classList.add('ativo');
+        const filtro = btn.dataset.filtro;
+        fotos.forEach(foto => {
+          foto.style.display = filtro === 'todos' || foto.dataset.cat === filtro ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
