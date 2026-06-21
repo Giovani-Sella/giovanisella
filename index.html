@@ -3,9 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Giovani Sella — jornalista, fotógrafo e produtor audiovisual. Textos sobre jornalismo, política e cultura.">
   <title>Giovani Sella</title>
+  <link rel="canonical" href="https://giovanisella.com.br/">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-  <h1>Hello World</h1>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Menu principal">
+    <div class="nav__inner">
+      <a class="nav__logo" href="/" aria-label="Giovani Sella — início">GS</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-menu">
+        <li><a href="/" aria-current="page">Início</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/curriculo/">Currículo</a></li>
+        <li><a href="/portfolio-foto/">Fotografia</a></li>
+        <li><a href="/audiovisual/">Audiovisual</a></li>
+        <li><a href="/outras-atividades/">Outros projetos</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__inner">
+      <div>
+        <p class="hero__eyebrow">Jornalismo · Fotografia · Audiovisual</p>
+        <h1 class="hero__titulo">Giovani Sella</h1>
+        <p class="hero__bio">
+          Jornalista em formação pela UFPR, estagiário no Jornal Plural.
+          Escrevo sobre mídia, política e cultura. Fotografo e produzo audiovisual
+          pela <a href="https://pererecriativa.com.br" target="_blank" rel="noopener">Perero Criativa</a>.
+        </p>
+        <div class="hero__acoes">
+          <a class="btn btn--primario" href="/blog/">Ler textos</a>
+          <a class="btn btn--secundario" href="/sobre.html">Sobre mim</a>
+        </div>
+      </div>
+      <img
+        class="hero__foto"
+        src="/assets/img/foto-giovani.jpg"
+        alt="Foto de Giovani Sella"
+        width="200" height="200"
+        onerror="this.style.display='none'"
+      >
+    </div>
+  </section>
+
+  <!-- POSTS RECENTES -->
+  <section class="secao">
+    <div class="secao__header">
+      <h2 class="secao__titulo">Textos recentes</h2>
+      <a class="secao__link" href="/blog/">Ver todos →</a>
+    </div>
+    <div class="posts-lista">
+
+      <a class="post-item" href="/posts/exemplo-post-texto.html">
+        <time class="post-item__data" datetime="2025-06-01">01 jun. 2025</time>
+        <div>
+          <span class="post-item__cat">Jornalismo</span>
+          <h3 class="post-item__titulo">Como o jornalismo nativo-digital encontra sustentabilidade financeira</h3>
+          <p class="post-item__desc">Uma análise dos modelos de negócio adotados por veículos independentes no Brasil.</p>
+        </div>
+      </a>
+
+      <a class="post-item" href="/posts/exemplo-post-foto.html">
+        <time class="post-item__data" datetime="2025-05-15">15 mai. 2025</time>
+        <div>
+          <span class="post-item__cat">Fotorreportagem</span>
+          <h3 class="post-item__titulo">Imagens do cotidiano curitibano</h3>
+          <p class="post-item__desc">Registro fotográfico das ruas e histórias de Curitiba.</p>
+        </div>
+      </a>
+
+      <a class="post-item" href="/posts/exemplo-post-video.html">
+        <time class="post-item__data" datetime="2025-04-20">20 abr. 2025</time>
+        <div>
+          <span class="post-item__cat">Audiovisual</span>
+          <h3 class="post-item__titulo">Mini-documentário: vozes da Feira do Largo</h3>
+          <p class="post-item__desc">Um retrato em vídeo dos comerciantes e frequentadores da feira tradicional.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CARDS DE ÁREAS -->
+  <section class="secao">
+    <div class="secao__header">
+      <h2 class="secao__titulo">Áreas</h2>
+    </div>
+    <div class="cards-grade container--lg" style="max-width:var(--max-w-lg);margin-inline:auto;padding-inline:1.25rem;">
+      <a class="card" href="/blog/">
+        <span class="card__icone" aria-hidden="true">✍</span>
+        <h3 class="card__titulo">Jornalismo &amp; Texto</h3>
+        <p class="card__desc">Reportagens, análises e ensaios sobre mídia, política e cultura brasileira.</p>
+      </a>
+      <a class="card" href="/portfolio-foto/">
+        <span class="card__icone" aria-hidden="true">📷</span>
+        <h3 class="card__titulo">Fotografia</h3>
+        <p class="card__desc">Fotojornalismo e fotografia documental. Trabalhos pela Perero Criativa.</p>
+      </a>
+      <a class="card" href="/audiovisual/">
+        <span class="card__icone" aria-hidden="true">🎬</span>
+        <h3 class="card__titulo">Audiovisual</h3>
+        <p class="card__desc">Documentários, produções institucionais e cobertura televisiva.</p>
+      </a>
+      <a class="card" href="/outras-atividades/">
+        <span class="card__icone" aria-hidden="true">◎</span>
+        <h3 class="card__titulo">Outros projetos</h3>
+        <p class="card__desc">Iniciativas cívicas, projetos colaborativos e experimentos editoriais.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="newsletter__inner">
+      <h2 class="newsletter__titulo">Receba meus textos</h2>
+      <p class="newsletter__desc">Envio por e-mail quando publico algo novo. Sem spam.</p>
+      <form class="newsletter__form" novalidate>
+        <input
+          class="newsletter__input"
+          type="email"
+          placeholder="seu@email.com"
+          aria-label="Seu e-mail"
+          required
+        >
+        <button class="newsletter__btn" type="submit">Inscrever</button>
+      </form>
+      <p class="newsletter__msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__nome">Giovani Sella</span>
+      <ul class="footer__links">
+        <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter / X</a></li>
+        <li><a href="https://linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/Giovani-Sella" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+      <p class="footer__copy">© 2025 Giovani Sella · Curitiba, PR</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/script.js"></script>
 </body>
 </html>
