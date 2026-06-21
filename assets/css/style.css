@@ -502,7 +502,7 @@ h1, h2, h3, h4 {
 .post-rodape__voltar:hover { color: var(--preto); }
 
 /* ─── CURRÍCULO ───────────────────────────────────────────── */
-.curriculo { max-width: var(--max-w); margin-inline: auto; padding: 2.5rem 2rem 5rem; }
+.curriculo { max-width: var(--max-w-lg); margin-inline: auto; padding: 2.5rem 2rem 5rem; }
 
 .curriculo__secao { margin-bottom: 2.5rem; }
 
@@ -646,7 +646,7 @@ h1, h2, h3, h4 {
 .video-card__desc   { font-size: var(--fs-sm);  color: var(--cinza); line-height: 1.65; margin: 0; }
 
 /* ─── SOBRE ───────────────────────────────────────────────── */
-.sobre { max-width: var(--max-w); margin-inline: auto; padding: 2.5rem 2rem 5rem; }
+.sobre { max-width: var(--max-w-lg); margin-inline: auto; padding: 2.5rem 2rem 5rem; }
 
 .sobre__foto-bloco {
   display: flex;
@@ -680,7 +680,7 @@ h1, h2, h3, h4 {
 .sobre__texto p  { font-size: var(--fs-base); line-height: 1.75; }
 
 /* ─── OUTRAS ATIVIDADES ──────────────────────────────────── */
-.atividades-lista { max-width: var(--max-w); margin-inline: auto; padding: 2.5rem 2rem 5rem; }
+.atividades-lista { max-width: var(--max-w-lg); margin-inline: auto; padding: 2.5rem 2rem 5rem; }
 
 .atividade-item {
   padding: 1.75rem 0;
