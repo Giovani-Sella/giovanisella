@@ -688,12 +688,7 @@ h1, h2, h3, h4 {
 .sobre__redes a {
   font-size: var(--fs-meta);
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
   color: var(--cinza);
-  border-bottom: 1px solid var(--cinza-claro);
-  padding-bottom: 1px;
-  transition: color 0.15s, border-color 0.15s;
 }
 .sobre__redes a:hover { color: var(--preto); border-color: var(--preto); }
 
