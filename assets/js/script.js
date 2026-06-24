@@ -35,10 +35,12 @@ function renderPost(p) {
 const lista = document.querySelector('.posts-lista[data-posts]');
 if (lista) {
   const limite = lista.dataset.posts;
+  const somenteExclusivo = lista.dataset.exclusivo === 'true';
   fetch('/posts/posts.json')
     .then(r => r.json())
     .then(posts => {
-      const items = limite === 'all' ? posts : posts.slice(0, Number(limite));
+      const filtrados = somenteExclusivo ? posts.filter(p => p.exclusivo) : posts;
+      const items = limite === 'all' ? filtrados : filtrados.slice(0, Number(limite));
       lista.innerHTML = items.map(renderPost).join('');
     })
     .catch(() => {
