@@ -1,0 +1,23 @@
+[
+  {
+    "titulo": "O que é isso?",
+    "descricao": "Esse é um experimento. Esse experimento é um site, também um blog, também uma newsletter.",
+    "categoria": "Experimento",
+    "data": "2026-06-24",
+    "url": "/posts/001-o-que-e-isso.html"
+  },
+  {
+    "titulo": "Tristes tardes de domingo",
+    "descricao": "Documentário vencedor do 17º Prêmio Fernando Pacheco Jordão sobre o genocídio juvenil periférico em Curitiba e região metropolitana.",
+    "categoria": "Documentário",
+    "data": "2026-06-24",
+    "url": "/posts/003-tristes-tardes-de-domingo.html"
+  },
+  {
+    "titulo": "Nasce a Rosa do Povo, a escola de samba da comunidade de Curitiba",
+    "descricao": "Texto publicado originalmente no site do Plural",
+    "categoria": "Reportagem",
+    "data": "2025-02-15",
+    "url": "/posts/002-rosa-do-povo.html"
+  }
+]
