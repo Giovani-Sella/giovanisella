@@ -1,3 +1,36 @@
+const hero = document.querySelector('section.hero');
+if (hero) {
+  const path = window.location.pathname;
+  const navLinks = [
+    { href: '/blog/',        label: 'Blog' },
+    { href: '/curriculo/',   label: 'Currículo' },
+    { href: '/portfolio/',   label: 'Portfólio' },
+    { href: '/sobre.html',   label: 'Sobre' },
+  ];
+  const nav = navLinks
+    .map(({ href, label }) => {
+      const ativo = path.startsWith(href) ? ' class="ativo"' : '';
+      return `<a href="${href}"${ativo}>${label}</a>`;
+    })
+    .join('\n          ');
+  hero.innerHTML = `
+    <div class="hero__inner">
+      <div>
+        <p class="hero__eyebrow">Site pessoal</p>
+        <h1 class="hero__titulo"><a href="/" style="color:inherit;text-decoration:none;">Giovani Sella</a></h1>
+        <p class="hero__bio">
+          Jornalista em formação pela UFPR, estagiário no Jornal Plural.
+          Aqui escrevo de vez em quando sobre o que vejo, produzo e penso. Além disso, fotografo e produzo audiovisual
+          pela <a href="https://pererecriativa.com.br" target="_blank" rel="noopener">Pererê Criativa</a>.
+        </p>
+        <nav class="hero__acoes" aria-label="Navegação rápida">
+          ${nav}
+        </nav>
+      </div>
+    </div>
+  `;
+}
+
 const footer = document.querySelector('footer.footer');
 if (footer) {
   footer.innerHTML = `
