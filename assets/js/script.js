@@ -48,6 +48,96 @@ if (footer) {
   `;
 }
 
+const lb = document.createElement('div');
+lb.className = 'lightbox';
+lb.innerHTML = `
+  <button class="lightbox__fechar" aria-label="Fechar">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" aria-label="Imagem anterior">&#8249;</button>
+  <img class="lightbox__img" src="" alt="">
+  <button class="lightbox__nav lightbox__nav--next" aria-label="Próxima imagem">&#8250;</button>
+`;
+document.body.appendChild(lb);
+
+let lbImagens = [], lbIndex = 0;
+
+function lbAtualizar() {
+  lb.querySelector('.lightbox__img').src = lbImagens[lbIndex].src;
+  lb.querySelector('.lightbox__img').alt = lbImagens[lbIndex].alt || '';
+  lb.querySelector('.lightbox__nav--prev').style.visibility = lbIndex > 0 ? '' : 'hidden';
+  lb.querySelector('.lightbox__nav--next').style.visibility = lbIndex < lbImagens.length - 1 ? '' : 'hidden';
+}
+
+lb.addEventListener('click', e => {
+  if (e.target === lb) { lb.classList.remove('ativo'); document.body.style.overflow = ''; }
+});
+lb.querySelector('.lightbox__fechar').addEventListener('click', () => {
+  lb.classList.remove('ativo'); document.body.style.overflow = '';
+});
+lb.querySelector('.lightbox__nav--prev').addEventListener('click', () => {
+  if (lbIndex > 0) { lbIndex--; lbAtualizar(); }
+});
+lb.querySelector('.lightbox__nav--next').addEventListener('click', () => {
+  if (lbIndex < lbImagens.length - 1) { lbIndex++; lbAtualizar(); }
+});
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('ativo')) return;
+  if (e.key === 'Escape') { lb.classList.remove('ativo'); document.body.style.overflow = ''; }
+  if (e.key === 'ArrowLeft' && lbIndex > 0) { lbIndex--; lbAtualizar(); }
+  if (e.key === 'ArrowRight' && lbIndex < lbImagens.length - 1) { lbIndex++; lbAtualizar(); }
+});
+
+document.querySelectorAll('.galeria[data-imagens]').forEach(galeria => {
+  let imagens;
+  try { imagens = JSON.parse(galeria.dataset.imagens); } catch { return; }
+  if (!Array.isArray(imagens) || imagens.length === 0) return;
+  const slice = imagens.slice(0, 10);
+
+  galeria.innerHTML = `
+    <figure class="galeria__principal">
+      <img class="galeria__principal-img" src="${slice[0].src}" alt="${slice[0].alt || ''}" loading="lazy">
+      <figcaption class="galeria__legenda">${slice[0].legenda || ''}</figcaption>
+    </figure>
+    ${slice.length > 1 ? `<div class="galeria__miniaturas">
+      ${slice.map((img, i) => `
+        <figure class="galeria__thumb${i === 0 ? ' galeria__thumb--ativo' : ''}" data-index="${i}">
+          <img src="${img.src}" alt="${img.alt || ''}" loading="lazy">
+        </figure>
+      `).join('')}
+    </div>` : ''}
+  `;
+
+  let atual = 0;
+
+  function atualizar(i) {
+    atual = i % slice.length;
+    const img = galeria.querySelector('.galeria__principal-img');
+    const leg = galeria.querySelector('.galeria__legenda');
+    img.src = slice[atual].src;
+    img.alt = slice[atual].alt || '';
+    leg.textContent = slice[atual].legenda || '';
+    galeria.querySelectorAll('.galeria__thumb').forEach((t, j) => {
+      t.classList.toggle('galeria__thumb--ativo', j === atual);
+    });
+  }
+
+  // let timer = slice.length > 1 ? setInterval(() => atualizar(atual + 1), 2000) : null;
+
+  galeria.querySelectorAll('.galeria__thumb').forEach((thumb, i) => {
+    thumb.addEventListener('click', () => {
+      // clearInterval(timer);
+      atualizar(i);
+      // timer = setInterval(() => atualizar(atual + 1), 2000);
+    });
+  });
+
+  const principalImg = galeria.querySelector('.galeria__principal-img');
+  principalImg.style.cursor = 'pointer';
+  principalImg.addEventListener('click', () => {
+    lbImagens = slice; lbIndex = atual; lbAtualizar();
+    lb.classList.add('ativo'); document.body.style.overflow = 'hidden';
+  });
+});
+
 function formatarData(iso) {
   return new Date(iso + 'T12:00:00').toLocaleDateString('pt-BR', {
     day: '2-digit', month: 'short', year: 'numeric'
