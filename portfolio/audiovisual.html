@@ -34,51 +34,333 @@
       </div>
     </div>
 
+    <div class="portfolio-filtros" role="group" aria-label="Filtrar vídeos por categoria">
+      <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
+      <button class="filtro-btn" data-filtro="documentarios">Documentários</button>
+      <button class="filtro-btn" data-filtro="jornalismo">VTs para a TV</button>
+      <button class="filtro-btn" data-filtro="redes">Vídeos verticais</button>
+      <button class="filtro-btn" data-filtro="curta">Curtas ficcionais</button>
+      <button class="filtro-btn" data-filtro="animacao">Animação e AfterEffects</button>
+      <button class="filtro-btn" data-filtro="institucional">Vídeos institucionais</button>
+    </div>
+
     <div class="audiovisual-lista">
 
-      <article class="video-card">
+      <h2 class="audiovisual-secao" data-secao="documentarios">Documentários</h2>
+
+      <article class="video-card" data-cat="documentarios">
         <div class="video-card__video">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Mini-documentário: vozes da Feira do Largo"
+          <iframe src="https://www.youtube.com/embed/F4oJor5wMYM" title="Tristes tardes de domingo"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen loading="lazy"></iframe>
         </div>
-        <p class="video-card__cat">Documentário</p>
-        <h2 class="video-card__titulo">Vozes da Feira do Largo</h2>
+        <p class="video-card__cat">Documentário · 2025</p>
+        <h3 class="video-card__titulo">Tristes tardes de domingo</h3>
         <p class="video-card__desc">
-          Mini-documentário sobre os comerciantes e frequentadores da Feira do Largo da Ordem,
-          em Curitiba. Gravado ao longo de três domingos consecutivos, em março de 2025.
-          Direção, câmera e edição: Giovani Sella.
+          Documentário sobre um grupo de jovens migrantes e refugiados que pratica futebol aos domingos
+          em Curitiba. Direção e câmera: Giovani Sella. Vencedor do Prêmio Pacheco Jordão pelo Instituto
+          Vladimir Herzog.
         </p>
       </article>
 
-      <article class="video-card">
+      <article class="video-card" data-cat="documentarios">
         <div class="video-card__video">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
-            title="Cobertura eleitoral — Como Voto Curitiba 2024"
+          <iframe src="https://www.youtube.com/embed/KR7V63UjBlE" title="Tristes tardes de domingo — trecho premiado"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen loading="lazy"></iframe>
         </div>
-        <p class="video-card__cat">Jornalismo televisivo</p>
-        <h2 class="video-card__titulo">Cobertura eleitoral — Como Voto Curitiba 2024</h2>
+        <p class="video-card__cat">Documentário · 2025</p>
+        <h3 class="video-card__titulo">Trecho seis</h3>
         <p class="video-card__desc">
-          Série de vídeos produzidos para o projeto Como Voto Curitiba durante as eleições
-          municipais de 2024. Entrevistas com candidatos, cobertura de debates e análise
-          de propostas para a cidade.
+          Documentário sobre Mawé, um pinguim-de-Magalhães que se perdeu do seu bando e foi encontrado nas praias de
+          Pontal do Paraná.
         </p>
       </article>
 
-      <article class="video-card">
+      <h2 class="audiovisual-secao" data-secao="jornalismo">VTs para a TV</h2>
+
+      <article class="video-card" data-cat="jornalismo">
         <div class="video-card__video">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Vídeo institucional"
+          <a class="video-card__yt-thumb" href="https://www.youtube.com/watch?v=tV5n3aCOcqY" target="_blank"
+            rel="noopener" aria-label="Assistir no YouTube">
+            <img src="https://img.youtube.com/vi/tV5n3aCOcqY/hqdefault.jpg" alt="" loading="lazy">
+          </a>
+        </div>
+      </article>
+
+      <article class="video-card" data-cat="jornalismo">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/5Az2Lb2ZF4k"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen loading="lazy"></iframe>
         </div>
-        <p class="video-card__cat">Vídeo institucional</p>
-        <h2 class="video-card__titulo">Vídeo institucional — cliente exemplo</h2>
+      </article>
+
+      <article class="video-card" data-cat="jornalismo">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/ufIToTUby3g"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="video-card" data-cat="jornalismo">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/L7PKyEjGWqY"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="video-card" data-cat="jornalismo">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/LfBXlXp2XWM"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="video-card" data-cat="jornalismo">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/ywkgdDs0Vxc"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <h2 class="audiovisual-secao" data-secao="redes">Vídeos verticais</h2>
+
+      <article class="video-card" data-cat="redes">
+        <div class="video-card__video video-card__video--vertical">
+          <iframe src="https://drive.google.com/file/d/1P1kHuXSzFq9_xpfL4CzmRSnXBEA2bCsy/preview"
+            allow="autoplay" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="video-card" data-cat="redes">
+        <div class="video-card__video video-card__video--vertical">
+          <iframe src="https://drive.google.com/file/d/1YuOtc1OsDzqgyTYq0rRDN3zuwhP5Rq7l/preview"
+            allow="autoplay" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="video-card" data-cat="redes">
+        <div class="video-card__video video-card__video--vertical">
+          <iframe src="https://drive.google.com/file/d/1Bl_iopqv_3YxLjk_AoGyD2CJ-OIhDGqn/preview"
+            allow="autoplay" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="video-card" data-cat="redes">
+        <div class="video-card__video video-card__video--vertical">
+          <iframe src="https://drive.google.com/file/d/1APFE29oAVH0urT0ymLO6qZdxSClg_-jL/preview"
+            allow="autoplay" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <h2 class="audiovisual-secao" data-secao="curta">Curtas-metragens</h2>
+
+      <article class="video-card" data-cat="curta">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/DmXToydhwcY" title="Meu Amigo Djanho"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-card__cat">Curta-metragem · 2023</p>
+        <h3 class="video-card__titulo">Meu Amigo Djanho</h3>
         <p class="video-card__desc">
-          Vídeo institucional produzido pela Pererê Criativa para apresentar a missão e os
-          serviços do cliente. Roteiro, gravação e edição completos.
+          Curta-metragem produzido na disciplina Introdução ao Audiovisual da UFPR. Vencedor do
+          Prêmio Universitário Trash Zé do Caixão (PUTZ).
         </p>
+      </article>
+
+      <article class="video-card" data-cat="curta">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/BjEJLRAZpxs" title="O Festival"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-card__cat">Curta-metragem · 2018</p>
+        <h3 class="video-card__titulo">O Festival</h3>
+        <p class="video-card__desc">
+          Primeiro curta-metragem. Metalinguagem sobre o fazer cinematográfico. Selecionado para o
+          Minuto Escola 2019 na categoria roteiro. Direção: Giovani Sella e Mariana Bein.
+        </p>
+      </article>
+
+      <article class="video-card" data-cat="curta">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/Vp3t-mSHNaI" title="Próximo distanciamento social"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-card__cat">Curta-metragem · 2021</p>
+        <h3 class="video-card__titulo">Próximo distanciamento social</h3>
+        <p class="video-card__desc">
+          Esquete sobre o isolamento na pandemia de Covid-19. Dirigido com auxílio de pessoa
+          formada em artes cênicas.
+        </p>
+      </article>
+
+      <article class="video-card" data-cat="curta">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/s_dgs9Mosh8" title="Terapia Caseira"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-card__cat">Curta-metragem · 2021</p>
+        <h3 class="video-card__titulo">Terapia Caseira</h3>
+        <p class="video-card__desc">
+          Mini-curta produzido em um dia para o festival Primeiro Plano. Tema: o uso do Twitter
+          como válvula de escape emocional.
+        </p>
+      </article>
+
+      <article class="video-card" data-cat="curta">
+        <div class="video-card__video">
+          <a class="video-card__yt-thumb" href="https://www.youtube.com/watch?v=bKUayQG2yIA" target="_blank"
+            rel="noopener" aria-label="Assistir no YouTube">
+            <img src="https://img.youtube.com/vi/bKUayQG2yIA/hqdefault.jpg" alt="" loading="lazy">
+          </a>
+        </div>
+        <p class="video-card__cat">Curta-metragem · 2018</p>
+        <h3 class="video-card__titulo">A Carta</h3>
+        <p class="video-card__desc">
+          Estudo prático com câmera Canon T5i. Exploração de exposição, abertura, ISO e
+          balanço de branco.
+        </p>
+      </article>
+
+      <h2 class="audiovisual-secao" data-secao="animacao">Animações</h2>
+
+      <article class="video-card" data-cat="animacao">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/QJGRQ9ZvQ-E" title="Valores Marista"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-card__cat">Animação · 2025</p>
+        <h3 class="video-card__titulo">Valores Marista</h3>
+        <p class="video-card__desc">
+          Vinhetas de abertura, encerramento e animações de transição entre valores para o Encontro
+          de Coordenações Pedagógicas Marista Brasil. Inclui template de gráficos para Premiere.
+        </p>
+      </article>
+
+      <article class="video-card" data-cat="animacao">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/TSeYGe8CGvY" title="Animação Yemanjá"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-card__cat">Animação · 2024</p>
+        <h3 class="video-card__titulo">Animação Yemanjá</h3>
+        <p class="video-card__desc">
+          Animação produzida para o documentário "O Enegrecer de Iemanjá e a Subtração do Sagrado
+          Afro", viabilizado pela Lei Paulo Gustavo.
+        </p>
+      </article>
+
+      <article class="video-card" data-cat="animacao">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/nN1l3AP3ms4" title="Identidade Jornal Comunicação"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-card__cat">Animação · 2024</p>
+        <h3 class="video-card__titulo">Identidade Jornal Comunicação</h3>
+        <p class="video-card__desc">
+          Arte de identidade visual animada produzida para o telejornal universitário Comunicação.
+        </p>
+      </article>
+
+      <article class="video-card" data-cat="animacao">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/6LKvaH73zXA" title="Animação Frans Post"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-card__cat">Animação · 2021</p>
+        <h3 class="video-card__titulo">Animação Frans Post</h3>
+        <p class="video-card__desc">
+          Trabalho escolar inspirado na obra do pintor Frans Post, produzido com Photoshop
+          e After Effects.
+        </p>
+      </article>
+
+      <article class="video-card" data-cat="animacao">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/MJTJTet4dAM" title="Bottle Cap Challenge"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-card__cat">Curta-metragem · 2019</p>
+        <h3 class="video-card__titulo">Bottle Cap Challenge</h3>
+        <p class="video-card__desc">
+          Estudo sobre composição em camadas no After Effects.
+        </p>
+      </article>
+
+      <h2 class="audiovisual-secao" data-secao="institucional">Aftermovies e institucionais</h2>
+
+      <article class="video-card" data-cat="institucional">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/wbwokSsZQGk"
+            title="Encontro de coordenações pedagógicas — Marista Brasil"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-card__cat">Aftermovie · 2025</p>
+        <h3 class="video-card__titulo">Encontro de coordenações pedagógicas — Marista Brasil</h3>
+        <p class="video-card__desc">
+          Aftermovie do encontro anual de coordenações pedagógicas dos Irmãos da Educação Básica
+          Marista Brasil. Produzido pela Pererê Criativa.
+        </p>
+      </article>
+
+      <article class="video-card" data-cat="institucional">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/Vhx_jRyXfSk" title="Aftermovie — Jornal Plural"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-card__cat">Aftermovie · 2025</p>
+        <h3 class="video-card__titulo">Aftermovie — Jornal Plural</h3>
+        <p class="video-card__desc">
+          Aftermovie produzido para o Jornal Plural pela Pererê Criativa.
+        </p>
+      </article>
+
+      <article class="video-card" data-cat="institucional">
+        <div class="video-card__video">
+          <iframe src="https://www.youtube.com/embed/XGzgIFDuPm0" title="Vídeo institucional — Brotto Campelo Advogados"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-card__cat">Vídeo institucional · 2026</p>
+        <h3 class="video-card__titulo">Vídeo institucional — Brotto Campelo Advogados</h3>
+        <p class="video-card__desc">
+          Vídeo institucional produzido pela Pererê Criativa para o escritório de advocacia
+          Brotto Campelo.
+        </p>
+      </article>
+
+      <article class="video-card" data-cat="institucional">
+        <div class="video-card__insta">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DXela14jVSG/" data-instgrm-version="14"></blockquote>
+        </div>
+      </article>
+
+      <article class="video-card" data-cat="institucional">
+        <div class="video-card__insta">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DVd7sMwjW0B/" data-instgrm-version="14"></blockquote>
+        </div>
+      </article>
+
+      <article class="video-card" data-cat="institucional">
+        <div class="video-card__insta">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DUBs51oCQsi/" data-instgrm-version="14"></blockquote>
+        </div>
       </article>
 
     </div>
@@ -87,6 +369,26 @@
   <footer class="footer"></footer>
 
   <script src="../assets/js/script.js"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script>
+    const btns = document.querySelectorAll('.filtro-btn');
+    const videos = document.querySelectorAll('.video-card');
+    const secoes = document.querySelectorAll('.audiovisual-secao');
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('ativo'));
+        btn.classList.add('ativo');
+        const filtro = btn.dataset.filtro;
+        const todos = filtro === 'todos';
+        videos.forEach(v => {
+          v.style.display = todos || v.dataset.cat === filtro ? '' : 'none';
+        });
+        secoes.forEach(s => {
+          s.style.display = todos || s.dataset.secao === filtro ? '' : 'none';
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
