@@ -130,33 +130,37 @@
 
       <h2 class="audiovisual-secao" data-secao="redes">Vídeos verticais</h2>
 
-      <article class="video-card" data-cat="redes">
-        <div class="video-card__video video-card__video--vertical">
-          <iframe src="https://drive.google.com/file/d/1P1kHuXSzFq9_xpfL4CzmRSnXBEA2bCsy/preview"
-            allow="autoplay" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </article>
+      <div class="redes-grade" data-grupo="redes">
 
-      <article class="video-card" data-cat="redes">
-        <div class="video-card__video video-card__video--vertical">
-          <iframe src="https://drive.google.com/file/d/1YuOtc1OsDzqgyTYq0rRDN3zuwhP5Rq7l/preview"
-            allow="autoplay" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </article>
+        <article class="video-card" data-cat="redes">
+          <div class="video-card__video video-card__video--vertical">
+            <iframe src="https://drive.google.com/file/d/1P1kHuXSzFq9_xpfL4CzmRSnXBEA2bCsy/preview"
+              allow="autoplay" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </article>
 
-      <article class="video-card" data-cat="redes">
-        <div class="video-card__video video-card__video--vertical">
-          <iframe src="https://drive.google.com/file/d/1Bl_iopqv_3YxLjk_AoGyD2CJ-OIhDGqn/preview"
-            allow="autoplay" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </article>
+        <article class="video-card" data-cat="redes">
+          <div class="video-card__video video-card__video--vertical">
+            <iframe src="https://drive.google.com/file/d/1YuOtc1OsDzqgyTYq0rRDN3zuwhP5Rq7l/preview"
+              allow="autoplay" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </article>
 
-      <article class="video-card" data-cat="redes">
-        <div class="video-card__video video-card__video--vertical">
-          <iframe src="https://drive.google.com/file/d/1APFE29oAVH0urT0ymLO6qZdxSClg_-jL/preview"
-            allow="autoplay" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </article>
+        <article class="video-card" data-cat="redes">
+          <div class="video-card__video video-card__video--vertical">
+            <iframe src="https://drive.google.com/file/d/1Bl_iopqv_3YxLjk_AoGyD2CJ-OIhDGqn/preview"
+              allow="autoplay" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </article>
+
+        <article class="video-card" data-cat="redes">
+          <div class="video-card__video video-card__video--vertical">
+            <iframe src="https://drive.google.com/file/d/1APFE29oAVH0urT0ymLO6qZdxSClg_-jL/preview"
+              allow="autoplay" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </article>
+
+      </div>
 
       <h2 class="audiovisual-secao" data-secao="curta">Curtas-metragens</h2>
 
@@ -371,20 +375,24 @@
   <script src="../assets/js/script.js"></script>
   <script async src="//www.instagram.com/embed.js"></script>
   <script>
-    const btns = document.querySelectorAll('.filtro-btn');
-    const videos = document.querySelectorAll('.video-card');
-    const secoes = document.querySelectorAll('.audiovisual-secao');
+    const btns   = document.querySelectorAll('.filtro-btn');
+    const videos  = document.querySelectorAll('.video-card');
+    const secoes  = document.querySelectorAll('.audiovisual-secao');
+    const grupos  = document.querySelectorAll('[data-grupo]');
     btns.forEach(btn => {
       btn.addEventListener('click', () => {
         btns.forEach(b => b.classList.remove('ativo'));
         btn.classList.add('ativo');
         const filtro = btn.dataset.filtro;
-        const todos = filtro === 'todos';
+        const todos  = filtro === 'todos';
         videos.forEach(v => {
           v.style.display = todos || v.dataset.cat === filtro ? '' : 'none';
         });
         secoes.forEach(s => {
           s.style.display = todos || s.dataset.secao === filtro ? '' : 'none';
+        });
+        grupos.forEach(g => {
+          g.style.display = todos || g.dataset.grupo === filtro ? '' : 'none';
         });
       });
     });

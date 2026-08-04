@@ -766,6 +766,12 @@ h1, h2, h3, h4 {
 
 .video-card__video--vertical { width: min(100%, 56.25vh); margin-inline: auto; padding-bottom: min(177.78%, 100vh); }
 
+.redes-grade {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+}
+
 .video-card__insta { width: 100%; }
 .video-card__insta .instagram-media { margin: 0 !important; min-width: 0 !important; width: 100% !important; }
 
@@ -887,4 +893,7 @@ h1, h2, h3, h4 {
   }
 
   .galeria__thumb img { width: 60px; height: 45px; }
+
+  .redes-grade { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .video-card__video--vertical { width: 100%; margin-inline: 0; padding-bottom: 177.78%; }
 }
