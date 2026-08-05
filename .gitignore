@@ -1,0 +1,11 @@
+# Arquivos de referência local (não fazem parte do site publicado)
+ref/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+*.swp
+*.swo
